@@ -6,7 +6,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import css from 'rollup-plugin-css-only';
 import autoPreprocess from 'svelte-preprocess';
-import postcss from 'rollup-plugin-postcss';
+import postcss from 'svelte-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
 
