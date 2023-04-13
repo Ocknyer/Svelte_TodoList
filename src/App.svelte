@@ -11,7 +11,7 @@
 
   let handleCheck = (id) => {
     const idx = todos.findIndex((todo) => todo.id === id);
-    todos[idx]['checked'] = !todos[idx]['checked'];
+    todos[idx]['done'] = !todos[idx]['done'];
   };
 
   let handleRemove = (id) => {
@@ -19,18 +19,20 @@
   };
 
   let handleEdit = (id, text) => {
-    const idx = todo.findIndex((todo) => todo.id === id);
-    todo[idx]['text'] = text;
+    const idx = todos.findIndex((todo) => todo.id === id);
+    todos[idx]['text'] = text;
   };
 
   let todoInput = '';
 
   const handleAdd = () => {
-    if (!todoInput) return;
+    if (!todoInput) {
+      return;
+    }
 
     todos = [
       ...todos,
-      { id: ++lastId, checked: false, text: todoInput },
+      { id: ++lastId, done: false, text: todoInput },
     ];
 
     todoInput = '';

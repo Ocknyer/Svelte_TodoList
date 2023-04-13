@@ -16,7 +16,7 @@
   </div>
 
   <div class="control">
-    <button class="button is-info" on:click={() => handleAdd}>
+    <button class="button is-info" on:click={() => handleAdd()}>
       추가하기
     </button>
   </div>
